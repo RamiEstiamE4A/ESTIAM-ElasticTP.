@@ -1,0 +1,10 @@
+{
+  "query": {
+    "match": {
+      "cuisine": "japonese",
+      "operator": and"
+      }
+    } 
+  },
+  "size": 0
+}

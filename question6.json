@@ -1,0 +1,23 @@
+ Remarque : Dans cet question on utilise deux requetes :
+
+Requete 1 : avec "-XPUT "
+
+{
+  "properties": {
+    "borough": { 
+      "type":     "text",
+      "fielddata": true
+    }
+  }
+}
+
+Requete 2 : avec "-XGET "
+
+{
+    "aggs" : {
+        "genres" : {
+            "terms" : { "field" : "borough" }
+        }
+    }
+
+}

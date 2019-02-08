@@ -1,0 +1,18 @@
+{
+    "query": {
+        "bool" : {
+            "must" : {
+                "match_all" : {}
+            },
+            "filter" : {
+                "geo_distance" : {
+                    "distance" : "220km",
+                    "pin.location" : {
+                        "lat" : 50,
+                        "lon" : -80
+                    }
+                }
+            }
+        }
+    }
+}

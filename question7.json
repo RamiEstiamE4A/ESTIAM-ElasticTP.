@@ -1,0 +1,35 @@
+Remarque : Dans cet question on utilise deux requetes :
+
+Requete 1 : avec "-XPUT "
+
+{
+  "properties": {
+    "cuisine": { 
+      "type":     "text",
+      "fielddata": true
+    }
+  }
+}'
+
+Requete 2 : avec "-XGET "
+
+{
+	  "aggs" : {
+      "genres" : {
+          "terms" : { "field" : "cuisine" }
+      }
+  },
+      
+  "query": {
+    "bool": {
+      "must": 
+        {
+          "match": {
+            "borough": "Brooklyn"
+          }
+         }
+       }
+     }
+    }                       
+  }                                 
+}

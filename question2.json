@@ -1,0 +1,10 @@
+{
+    "query": {
+        "match": {
+            "street": {      
+                "query":    "8 Avenue",
+                "operator": "and"
+            }
+        }
+    }
+}
