@@ -1,8 +1,7 @@
 Remarque : Dans cet question j 'ai utilisé deux requetes :
 
-Requete 1 : avec "-XPUT "
+Requete 1 : curl -H 'content-type: application/json' -XPUT 'localhost:9200/newlist/_mapping/personal' -d'
 
-curl -H 'content-type: application/json' -XPUT 'localhost:9200/newlist/_mapping/personal' -d'
 {
   "properties": {
     "cuisine": { 
@@ -12,11 +11,9 @@ curl -H 'content-type: application/json' -XPUT 'localhost:9200/newlist/_mapping/
   }
 }'
 
-Requete 2 : avec "-XGET "
-
- curl -H 'content-type: application/json' -XGET 'localhost:9200/newlist/_mapping/personal' -d'
+Requete 2 :  curl -H 'content-type: application/json' -XGET 'localhost:9200/newlist/_mapping/personal' -d'
 {
-	  "aggs" : {
+      "aggs" : {
       "genres" : {
           "terms" : { "field" : "cuisine" }
       }
