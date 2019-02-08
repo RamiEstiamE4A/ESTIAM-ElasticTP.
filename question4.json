@@ -6,10 +6,10 @@
             },
             "filter" : {
                 "geo_distance" : {
-                    "distance" : "220km",
+                    "distance" : "200km",
                     "pin.location" : {
-                        "lat" : 50,
-                        "lon" : -80
+                        "lat" : 40,
+                        "lon" : -70
                     }
                 }
             }
