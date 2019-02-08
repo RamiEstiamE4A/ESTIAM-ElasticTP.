@@ -1,6 +1,8 @@
- Remarque : Dans cet question on utilise deux requetes :
+ Remarque : Dans cet question j' ai utilisé deux requetes :
 
-Requete 1 : avec "-XPUT "
+Requete 1 : avec "-XPUT " 
+
+curl -H 'content-type: application/json' -XPUT 'localhost:9200/list/_search?pretty' -d'
 
 {
   "properties": {
@@ -12,6 +14,8 @@ Requete 1 : avec "-XPUT "
 }
 
 Requete 2 : avec "-XGET "
+
+curl -H 'content-type: application/json' -XPUT 'localhost:9200/list/_search?pretty' -d'
 
 {
     "aggs" : {
